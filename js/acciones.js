@@ -1,9 +1,11 @@
 // JavaScript Document
 $(document).ready(function(e) {
-	document.addEventListener("deviceready", function(){
+	document.addEventListener("deviceready",function(){
+		
 		$('#izquierda').on("swipeleft",function(){
 			navigator.notification.alert("Deslizó a la izquierda",function(){"aplicación7","Aceptar"});
 		}); //cierre deslizar izquierda
+		
 		$('#derecha').on("swiperight",function(){
 			navigator.notification.confirm("¿Que quieres hacer?",function(opt){
 				switch(opt)
@@ -18,5 +20,5 @@ $(document).ready(function(e) {
 				}
 			},"aplicación7","Beepear,Vibrar,Cancelar");
 		});// cierre del deslizar derecha
-	}, false);// cierre del deviceready
+	},false);// cierre del deviceready
 });// cierre del document principal
